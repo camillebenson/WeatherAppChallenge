@@ -47,13 +47,10 @@ class ViewController: UIViewController {
             (data, response, error) -> Void in
             if error != nil {
                 // Print error to screen...
-                println(error.localizedDescription)
-                println("printed error")
                 dispatch_async(dispatch_get_main_queue()) {
                     self.descriptionLabel.text = String("Error: " + error.localizedDescription)
                     self.tempLabel.text = ""
                     self.cityLabel.text = ""
-                    //self.cityTextField.text = "City"
                 }
             } else {
                 // Updates Labels immediately on main thread
@@ -78,19 +75,16 @@ class ViewController: UIViewController {
             // Parse for name of city
             if let name = json["name"] as? String {
                 cityLabel.text = name
-                println(name)
             }
             // Parse for temperature and convert
             if let main = json["main"] as? NSDictionary {
                 if let temp = main["temp"] as? Double {
-                    println(temp)
                     // Fahrenheit to Kelvin conversion
                     // Eqn: T(°F) = T(K) × 9/5 - 459.67
                     var convertedTemp = ((temp * (9.0/5.0)) - 459.67)
                     // Round up Fahrenheit calculation to Int
                     var roundedTemp = String(format: "%.0f",convertedTemp)
                     var finalTemp = String(roundedTemp + "°F")
-                    println(finalTemp)
                     self.tempLabel.text = finalTemp
                 }
             }
@@ -99,12 +93,10 @@ class ViewController: UIViewController {
                 let set: AnyObject! = weather[0]
                 // Icon
                 if let icon: AnyObject! = set["icon"] {
-                    println(set["icon"])
                     self.iconImageView.image = UIImage(named: icon! as! String)
                 }
                 // Description
                 if let description: AnyObject! = set["description"] {
-                    println(set["description"])
                     self.descriptionLabel.text = description as? String
                 }
             }
