@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Rain_or_Shine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ch-wJ-O8O"/>
+                        <viewControllerLayoutGuide type="bottom" id="EVT-vM-yPs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading City..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-MP-gHI">
+                                <rect key="frame" x="16" y="51" width="288" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="GW3-Jb-bIN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFo-HK-Zdw">
+                                <rect key="frame" x="16" y="90" width="288" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="ORu-HW-1pO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-us-TKp">
+                                <rect key="frame" x="103" y="172" width="114" height="81"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Description..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR3-cw-Ydv">
+                                <rect key="frame" x="16" y="261" width="288" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="vOQ-ui-otv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jR3-cw-Ydv" secondAttribute="centerX" id="0vq-md-r5a"/>
+                            <constraint firstAttribute="centerX" secondItem="ILk-us-TKp" secondAttribute="centerX" id="13p-hV-HtY"/>
+                            <constraint firstAttribute="centerX" secondItem="sFo-HK-Zdw" secondAttribute="centerX" id="8Zr-7z-8aQ"/>
+                            <constraint firstAttribute="centerX" secondItem="c9I-MP-gHI" secondAttribute="centerX" id="93Y-wu-KkM"/>
+                            <constraint firstItem="sFo-HK-Zdw" firstAttribute="top" secondItem="c9I-MP-gHI" secondAttribute="bottom" constant="8" symbolic="YES" id="EHw-0O-Rcy"/>
+                            <constraint firstItem="ILk-us-TKp" firstAttribute="top" secondItem="sFo-HK-Zdw" secondAttribute="bottom" constant="8" symbolic="YES" id="aa4-Bd-Ech"/>
+                            <constraint firstItem="ILk-us-TKp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="87" id="bFw-9Z-xit"/>
+                            <constraint firstItem="c9I-MP-gHI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="fAl-5W-nlm"/>
+                            <constraint firstItem="jR3-cw-Ydv" firstAttribute="leading" secondItem="sFo-HK-Zdw" secondAttribute="leading" id="h1J-gf-5Q0"/>
+                            <constraint firstItem="c9I-MP-gHI" firstAttribute="top" secondItem="5Ch-wJ-O8O" secondAttribute="bottom" constant="31" id="jZs-3J-Qmh"/>
+                            <constraint firstItem="sFo-HK-Zdw" firstAttribute="leading" secondItem="c9I-MP-gHI" secondAttribute="leading" id="tSA-qg-5Ck"/>
+                            <constraint firstItem="jR3-cw-Ydv" firstAttribute="top" secondItem="ILk-us-TKp" secondAttribute="bottom" constant="8" symbolic="YES" id="v7q-Qh-CMa"/>
+                            <constraint firstItem="EVT-vM-yPs" firstAttribute="top" secondItem="jR3-cw-Ydv" secondAttribute="bottom" constant="276" id="wGe-YO-Cfr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="c9I-MP-gHI" id="Gsw-nF-mo8"/>
+                        <outlet property="descriptionLabel" destination="jR3-cw-Ydv" id="g1P-iL-QUR"/>
+                        <outlet property="iconImageView" destination="ILk-us-TKp" id="L1X-rY-Agw"/>
+                        <outlet property="tempLabel" destination="sFo-HK-Zdw" id="aNZ-j7-S0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="320"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
