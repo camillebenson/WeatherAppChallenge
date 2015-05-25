@@ -5,6 +5,9 @@
 //  Created by Camille Benson on 5/25/15.
 //  Copyright (c) 2015 Carleton College. All rights reserved.
 //
+//  Single View that controls the app. Retrieves weather data from server,
+//  error checks, parses the NSData received and selects information to
+//  display on screen.
 
 import UIKit
 
